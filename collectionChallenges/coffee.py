@@ -1,3 +1,4 @@
+# Print banner
 print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
 print("+                               +")
 print("+         The Coffee Shop       +")
@@ -15,11 +16,12 @@ print(" > Mocha")
 print(" > Flat White")
 print("----------------------------")
 
-price = 0
-coffee = input("What type of coffee would you like?")
-coffee = coffee.title()
 
+price = 0
+
+# Get the type of coffee
 while(True):
+   coffee = input("What type of coffee would you like?").title()
    match coffee:
       case "Espresso":
          price = price + 2.50
@@ -45,15 +47,15 @@ while(True):
       case _:
          print(f"Invalid option {coffee}")
 
+# Get cup size
 print(f'{coffee} is available in the following sizes: ')
 print(" > M")
 print(" > L")
 print(" > XL")
 print("----------------------------")
 
-cup_size = input("Cup Size: ").upper()
-#Complete the code here...
 while(True):
+   cup_size = input("Cup Size: ").upper()
    match cup_size:
       case 'M':
          break
@@ -67,9 +69,10 @@ while(True):
          print('Invalid Cup Size, please try again')
 
 print("----------------------------")
-takeaway = input("Takeaway ? [Yes/No]").title()
 
+# Get if customer wants to Takeaway
 while(True):
+   takeaway = input("Takeaway ? [Yes/No]").title()
    match takeaway:
       case'Yes':
          price = price + 1
